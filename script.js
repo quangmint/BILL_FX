@@ -86,7 +86,7 @@ const TEMPLATES = {
             content:   { 
                 label: "Nội dung", 
                 Y: 2000, 
-                X: 131, 
+                X: 1317, 
                 fontSize: '500 53px Roboto', 
                 textAlign: 'right',
                 color: '#2c1e4f'
@@ -369,4 +369,5 @@ document.getElementById('inputResultScreen').addEventListener('keydown', functio
         e.preventDefault();
         document.getElementById('generateBtn').click(); 
     }
+
 });
