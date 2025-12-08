@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Tạo Ảnh Tự Động</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="selectionScreen">
+            <h1>Chọn Loại Phiếu Ngân Hàng</h1>
+            
+            <button class="template-btn" data-template="tpbank">TP BANK</button>
+            <button class="template-btn" data-template="techcombank">TECHCOM BANK</button>
+            <button class="template-btn" data-template="vpbank">VP BANK</button>
+            
+            <p style="margin-top: 20px; color: gray;">Sau khi chọn, bạn sẽ được chuyển sang trang nhập liệu.</p>
+        </div>
+
+        <div id="inputResultScreen" style="display: none;">
+            
+            <h1 id="documentTitle"></h1> 
+            
+            <div class="input-group">
+                <label>1. Đồng hồ điện thoại:</label>
+                <input type="text" id="timeClockInput" placeholder="Ví dụ: 10:30">
+            </div>
+            
+            <div class="input-group">
+                <label>2. Số tiền:</label>
+                <input type="text" id="amountInput" placeholder="Ví dụ: 5.000.000 VNĐ">
+            </div>
+
+            <div class="input-group">
+                <label>3. Tên người nhận:</label>
+                <input type="text" id="nameInput" placeholder="Ví dụ: Nguyễn Văn A">
+            </div>
+            
+            <div class="input-group">
+                 <label>4. BANK (Ngân hàng):</label>
+                 <select id="bankInput"> 
+                 <option value="MB BANK">MB BANK</option>
+                 <option value="TP BANK" selected>TP BANK</option>
+                 <option value="VP BANK">VP BANK</option>
+                    <option value="TECHCOM BANK">TECHCOM BANK</option>
+            </select>
+            </div>
+
+            <div class="input-group">
+                <label>5. Số tài khoản:</label>
+                <input type="text" id="accountInput" placeholder="Ví dụ: 1903xxxxxxxx">
+            </div>
+
+            <div class="input-group">
+                <label>6. Nội dung giao dịch:</label>
+                <input type="text" id="contentInput" placeholder="Ví dụ: Thanh toan don hang ABC">
+            </div>
+
+            <div class="input-group">
+                <label>7. Thời gian giao dịch:</label>
+                <input type="text" id="timeDetailInput" placeholder="Ví dụ: 08/12/2025 - 10:29:45">
+            </div>
+            <button id="generateBtn">Tạo Ảnh Ngay</button>
+            <button id="backBtn" style="background-color: #6c757d; margin-top: 10px;"> Quay lại </button>
+
+            </div>
+
+            <div id="resultArea" style="display: none; margin-top: 20px;">
+                <h3>Ảnh của bạn:</h3>
+                <img id="finalImage" style="max-width: 100%; border: 1px solid #ccc;">
+                <br><br>
+                <a id="downloadLink" download="ket-qua.jpg">
+                    <button style="background-color: #007bff;">Tải về máy</button>
+                </a>
+            </div>
+            <canvas id="myCanvas" style="display: none;"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
