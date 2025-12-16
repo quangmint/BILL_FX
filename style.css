@@ -45,3 +45,26 @@ button:hover { background-color: #218838; }
     /* Đảm bảo nút quay lại cũng theo chuẩn */
     margin-bottom: 15px; 
 }
+@font-face {
+    font-family: "SF Pro Display";
+    /* Đảm bảo đường dẫn (url) và tên file là chính xác */
+    src: url("fonts/SFProDisplay-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Độ dày 500 (Medium/SemiBold) */
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("fonts/SFProDisplay-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Độ dày 700 (Bold) */
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("fonts/SFProDisplay-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
